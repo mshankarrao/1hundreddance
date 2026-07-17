@@ -39,3 +39,9 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# large source media (use optimized files in /public instead)
+/video.mp4
+/Stuido.jpg
+/office.jpg
+/StudioFull_*.jpg
