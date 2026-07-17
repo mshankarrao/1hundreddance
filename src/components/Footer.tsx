@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { WHATSAPP } from "@/lib/whatsapp";
+import { withBase } from "@/lib/paths";
 
 const footerLinks = {
   Class: [
@@ -38,7 +39,7 @@ export default function Footer() {
         <div className="grid gap-12 md:grid-cols-[1.4fr_1fr_1fr]">
           <div>
             <Image
-              src="/logo.png"
+              src={withBase("/logo.png")}
               alt="1 HUNDRED"
               width={140}
               height={140}

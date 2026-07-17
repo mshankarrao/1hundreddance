@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import { motion } from "framer-motion";
+import { withBase } from "@/lib/paths";
 
 const founders = [
   {
@@ -59,7 +60,7 @@ export default function Founders() {
                 }`}
               >
                 <Image
-                  src={founder.image}
+                  src={withBase(founder.image)}
                   alt={`${founder.role} of 1 HUNDRED`}
                   fill
                   quality={100}

@@ -47,7 +47,7 @@ export default function Hero() {
           className="mb-6"
         >
           <Image
-            src="/logo.png"
+            src={withBase("/logo.png")}
             alt="1 HUNDRED Dance Studio"
             width={220}
             height={220}

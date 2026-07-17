@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import { motion } from "framer-motion";
+import { withBase } from "@/lib/paths";
 
 export default function About() {
   return (
@@ -24,7 +25,7 @@ export default function About() {
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(235,46,126,0.18),transparent_55%)]" />
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_80%,rgba(235,46,126,0.1),transparent_45%)]" />
           <Image
-            src="/logo.png"
+            src={withBase("/logo.png")}
             alt="1 HUNDRED"
             width={320}
             height={320}

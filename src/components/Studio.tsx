@@ -4,6 +4,7 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 import type { ReactNode } from "react";
 import { WHATSAPP } from "@/lib/whatsapp";
+import { withBase } from "@/lib/paths";
 
 const portraits = [
   {
@@ -122,7 +123,7 @@ export default function Studio() {
             >
               <FrameShell aspectClass="aspect-[3/4]">
                 <Image
-                  src={space.src}
+                  src={withBase(space.src)}
                   alt={space.alt}
                   fill
                   quality={95}
@@ -174,7 +175,7 @@ export default function Studio() {
 
               <FrameShell aspectClass="aspect-[16/9]">
                 <Image
-                  src={row.src}
+                  src={withBase(row.src)}
                   alt={row.alt}
                   fill
                   quality={95}

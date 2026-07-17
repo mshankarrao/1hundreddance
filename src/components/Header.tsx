@@ -4,6 +4,7 @@ import Image from "next/image";
 import { useEffect, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { WHATSAPP } from "@/lib/whatsapp";
+import { withBase } from "@/lib/paths";
 import ThemeToggle from "@/components/ThemeToggle";
 
 const links = [
@@ -55,7 +56,7 @@ export default function Header() {
             aria-label="1 HUNDRED Dance Studio home"
           >
             <Image
-              src="/logo.png"
+              src={withBase("/logo.png")}
               alt="1 HUNDRED"
               width={120}
               height={120}

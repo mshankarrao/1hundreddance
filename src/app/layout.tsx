@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Bebas_Neue, DM_Sans, Syne } from "next/font/google";
 import { ThemeProvider } from "@/components/ThemeProvider";
+import { withBase } from "@/lib/paths";
 import "./globals.css";
 
 const bebas = Bebas_Neue({
@@ -26,8 +27,8 @@ export const metadata: Metadata = {
   description:
     "1 HUNDRED Dance Studio — Move your feet, feel united. Classes, choreographers, and community.",
   icons: {
-    icon: "/logo.png",
-    apple: "/logo.png",
+    icon: withBase("/logo.png"),
+    apple: withBase("/logo.png"),
   },
 };
 
