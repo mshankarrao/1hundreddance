@@ -50,9 +50,9 @@ export default function About() {
             A CREW.
           </h2>
           <p className="mt-6 max-w-md text-base leading-relaxed text-foreground/70 md:text-lg">
-            1 HUNDRED is built for dancers who want intensity, craft, and
-            community. From beginner foundations to performance-ready sessions —
-            every class pushes you further.
+            Founded by Sumit and Geeta Agrawal, 1 HUNDRED is built for dancers
+            who want intensity, craft, and community — from beginner foundations
+            to performance-ready sessions.
           </p>
           <div className="mt-10 grid grid-cols-3 gap-6 border-t border-line pt-8">
             {[

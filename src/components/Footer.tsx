@@ -83,14 +83,21 @@ export default function Footer() {
         <div className="mt-14 flex flex-col gap-3 border-t border-line pt-8 text-xs text-muted md:flex-row md:items-center md:justify-between">
           <p>© {new Date().getFullYear()} 1 HUNDRED Dance. All Rights Reserved.</p>
           <div className="flex gap-6">
-            <a href="#" className="transition-colors hover:text-foreground">
+            <a
+              href="https://www.instagram.com/1hundreddance"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="transition-colors hover:text-foreground"
+            >
               Instagram
             </a>
-            <a href="#" className="transition-colors hover:text-foreground">
+            <a
+              href="https://youtube.com/@1hundreddance"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="transition-colors hover:text-foreground"
+            >
               YouTube
-            </a>
-            <a href="#" className="transition-colors hover:text-foreground">
-              TikTok
             </a>
           </div>
         </div>
