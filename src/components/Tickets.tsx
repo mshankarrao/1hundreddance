@@ -6,12 +6,10 @@ import { whatsappLink } from "@/lib/whatsapp";
 
 const classes = [
   "Dance Fitness",
-  "Bollywood",
-  "Zumba",
   "Tollywood",
-  "Semi-Classical",
-  "Afro Dance",
-  "Kuchipudi",
+  "Bollywood Regular",
+  "Bollyhop / Bollywood",
+  "Bollywood Ladies Style",
   "Kids Dance",
 ];
 

@@ -4,11 +4,90 @@ import { motion } from "framer-motion";
 import { WHATSAPP } from "@/lib/whatsapp";
 
 const schedule = [
-  { time: "10:00", name: "Dance Fitness", teacher: "NARA", level: "All Levels" },
-  { time: "12:00", name: "Bollywood", teacher: "LIA", level: "Beginner" },
-  { time: "14:30", name: "Zumba", teacher: "JUN", level: "All Levels" },
-  { time: "17:00", name: "Semi-Classical", teacher: "LIA", level: "Intermediate" },
-  { time: "19:30", name: "Kids Dance", teacher: "NARA", level: "Kids" },
+  {
+    time: "7:00 AM",
+    name: "Dance Fitness",
+    days: "Tue – Fri",
+    batch: "Morning",
+  },
+  {
+    time: "8:10 AM",
+    name: "Bollyhop / Bollywood",
+    days: "Tue – Fri",
+    batch: "Regular Batch",
+  },
+  {
+    time: "9:00 AM",
+    name: "Dance Fitness",
+    days: "Sat · Sun",
+    batch: "Weekend",
+  },
+  {
+    time: "10:00 AM",
+    name: "Tollywood",
+    days: "Sat · Sun",
+    batch: "Regular Batch",
+  },
+  {
+    time: "11:00 AM",
+    name: "Bollywood",
+    days: "Sat · Sun",
+    batch: "Regular Batch",
+  },
+  {
+    time: "12:00 PM",
+    name: "Bollywood Ladies Style",
+    days: "Sat · Sun",
+    batch: "Ladies Style",
+  },
+  {
+    time: "5:30 PM",
+    name: "Kids Dance",
+    days: "Mon – Fri",
+    batch: "Regular Batch",
+  },
+  {
+    time: "6:00 PM",
+    name: "Dance Fitness",
+    days: "Mon · Wed · Fri",
+    batch: "Evening",
+  },
+  {
+    time: "6:00 PM",
+    name: "Kids Dance",
+    days: "Mon · Wed · Fri",
+    batch: "Regular Batch",
+  },
+  {
+    time: "7:00 PM",
+    name: "Dance Fitness",
+    days: "Mon – Fri",
+    batch: "Evening",
+  },
+  {
+    time: "8:00 PM",
+    name: "Tollywood",
+    days: "Tue · Thu",
+    batch: "Regular Batch",
+  },
+  {
+    time: "8:00 PM",
+    name: "Bollywood",
+    days: "Mon · Wed · Fri",
+    batch: "Regular Batch",
+  },
+  {
+    time: "8:00 PM",
+    name: "Bollywood Ladies Style",
+    days: "Tue · Thu",
+    batch: "Ladies Style",
+  },
+  {
+    time: "9:00 PM",
+    name: "Tollywood",
+    days: "Mon · Wed · Fri",
+    batch: "Regular Batch",
+  },
 ];
 
 export default function Schedule() {
@@ -18,7 +97,7 @@ export default function Schedule() {
         <div className="mb-12 flex flex-col gap-6 md:mb-16 md:flex-row md:items-end md:justify-between">
           <div>
             <p className="mb-3 text-xs tracking-[0.25em] text-accent uppercase">
-              Today
+              Weekly Timings
             </p>
             <h2 className="font-[family-name:var(--font-display)] text-5xl tracking-wide md:text-7xl">
               SCHEDULE
@@ -37,29 +116,29 @@ export default function Schedule() {
         <div className="space-y-0">
           {schedule.map((row, i) => (
             <motion.div
-              key={`${row.time}-${row.name}`}
+              key={`${row.time}-${row.name}-${row.days}`}
               initial={{ opacity: 0, y: 16 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.45, delay: i * 0.06 }}
-              className="grid grid-cols-[4.5rem_1fr] items-center gap-4 border-b border-line py-5 md:grid-cols-[6rem_1.4fr_1fr_8rem] md:gap-8 md:py-6"
+              transition={{ duration: 0.4, delay: Math.min(i * 0.03, 0.35) }}
+              className="grid grid-cols-[5rem_1fr] items-center gap-4 border-b border-line py-5 md:grid-cols-[7rem_1.5fr_1fr_9rem] md:gap-8 md:py-6"
             >
-              <span className="font-[family-name:var(--font-display)] text-2xl text-accent md:text-3xl">
+              <span className="font-[family-name:var(--font-display)] text-xl text-accent md:text-3xl">
                 {row.time}
               </span>
               <div>
-                <p className="font-[family-name:var(--font-brand)] text-lg font-bold md:text-xl">
+                <p className="font-[family-name:var(--font-brand)] text-base font-bold md:text-xl">
                   {row.name}
                 </p>
                 <p className="mt-1 text-sm text-muted md:hidden">
-                  {row.teacher} · {row.level}
+                  {row.days} · {row.batch}
                 </p>
               </div>
-              <p className="hidden text-sm tracking-[0.08em] text-muted uppercase md:block">
-                {row.teacher}
+              <p className="hidden text-sm tracking-[0.06em] text-muted md:block">
+                {row.days}
               </p>
               <p className="hidden text-right text-sm text-foreground/60 md:block">
-                {row.level}
+                {row.batch}
               </p>
             </motion.div>
           ))}
