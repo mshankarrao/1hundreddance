@@ -3,7 +3,20 @@
 import { motion } from "framer-motion";
 import { WHATSAPP } from "@/lib/whatsapp";
 
-const classes = [
+type ClassSlot = {
+  time: string;
+  days: string;
+  note?: string;
+};
+
+type DanceClass = {
+  title: string;
+  tagline: string;
+  desc: string;
+  slots: ClassSlot[];
+};
+
+const classes: DanceClass[] = [
   {
     title: "DANCE FITNESS",
     tagline: "Unlimited classes · One membership price",
@@ -126,7 +139,7 @@ export default function Classes() {
                           <p className="font-[family-name:var(--font-brand)] text-base font-bold md:text-lg">
                             {slot.time}
                           </p>
-                          {"note" in slot && slot.note ? (
+                          {slot.note ? (
                             <p className="mt-0.5 text-xs text-muted">
                               {slot.note}
                             </p>
