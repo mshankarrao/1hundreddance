@@ -52,7 +52,7 @@ export default function Footer() {
             <p className="mt-6 text-sm text-foreground/70">
               Madhapur / HITEC City, Hyderabad
               <br />
-              WhatsApp · +91 96185 68570
+              WhatsApp · +91 83175 70274
             </p>
           </div>
 

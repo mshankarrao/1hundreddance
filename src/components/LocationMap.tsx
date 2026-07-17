@@ -66,7 +66,7 @@ export default function LocationMap() {
                     Reach Us
                   </p>
                   <p className="mt-1 text-sm text-foreground/80">
-                    WhatsApp · +91 96185 68570
+                    WhatsApp · +91 83175 70274
                   </p>
                 </div>
               </div>
