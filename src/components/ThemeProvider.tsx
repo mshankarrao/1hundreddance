@@ -29,16 +29,12 @@ function applyTheme(theme: ThemeMode) {
 }
 
 export function ThemeProvider({ children }: { children: ReactNode }) {
-  const [theme, setThemeState] = useState<ThemeMode>("day");
+  const [theme, setThemeState] = useState<ThemeMode>("night");
 
   useEffect(() => {
     const stored = window.localStorage.getItem(STORAGE_KEY) as ThemeMode | null;
     const preferred =
-      stored === "day" || stored === "night"
-        ? stored
-        : window.matchMedia("(prefers-color-scheme: dark)").matches
-          ? "night"
-          : "day";
+      stored === "day" || stored === "night" ? stored : "night";
 
     setThemeState(preferred);
     applyTheme(preferred);

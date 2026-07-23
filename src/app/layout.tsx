@@ -37,9 +37,7 @@ const themeInitScript = `
   try {
     var key = '1hundred-theme';
     var stored = localStorage.getItem(key);
-    var theme = stored === 'day' || stored === 'night'
-      ? stored
-      : (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'night' : 'day');
+    var theme = stored === 'day' || stored === 'night' ? stored : 'night';
     var root = document.documentElement;
     if (theme === 'night') root.classList.add('dark');
     else root.classList.remove('dark');
@@ -58,7 +56,7 @@ export default function RootLayout({
     <html
       lang="en"
       suppressHydrationWarning
-      className={`${bebas.variable} ${syne.variable} ${dmSans.variable} h-full antialiased`}
+      className={`dark ${bebas.variable} ${syne.variable} ${dmSans.variable} h-full antialiased`}
     >
       <head>
         <script dangerouslySetInnerHTML={{ __html: themeInitScript }} />
