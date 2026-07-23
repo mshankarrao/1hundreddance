@@ -33,8 +33,7 @@ jobs:
       - name: Build static site
         run: npm run build
         env:
-          GITHUB_PAGES: "true"
-          NEXT_PUBLIC_BASE_PATH: /1hundreddance
+          GITHUB_PAGES: "false"
 
       - name: Add .nojekyll
         run: touch out/.nojekyll
